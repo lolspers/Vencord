@@ -237,14 +237,14 @@ export function getUniqueUsername(user: User) {
 }
 
 /**
- *  Get the URL for an emoji. This function always returns a gif URL for animated emojis, instead of webp
+ *  Get the URL for an emoji.
  * @param id The emoji id
  * @param animated Whether the emoji is animated
  * @param size The size for the emoji
  */
 export function getEmojiURL(id: string, animated: boolean, size: number) {
     const url = IconUtils.getEmojiURL({ id, animated, size });
-    return animated ? url.replace(".webp", ".gif") : url;
+    return url;
 }
 
 // Discord has a similar function in their code
